@@ -156,3 +156,11 @@
     line-height: 60%;
     list-style-type: none;
 }
+
+.profileimage {
+    border-radius: 50%;
+    scale: 20% 20%;
+    position: absolute;
+    top: -58%;
+    left: 8%;
+}
