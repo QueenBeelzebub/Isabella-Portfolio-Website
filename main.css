@@ -1,21 +1,157 @@
-body {
-    background-color: rgb(207, 234, 236);
-    color: rgb(29, 51, 64);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-h1{
-    color: darkblue;
-    font-size: 30px;
-}
-.div-1{
-    background-color: rgb(17, 121, 121);
-    width: 200px;
+  
+  @keyframes background-pan {
+    from {
+      background-position: 0% center;
+    }
+    
+    to {
+      background-position: -200% center;
+    }
+  }
+  
+  body {
+    background-color: rgb(10, 10, 10);
+    display: grid;
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+    place-items: center;
+    font-family: "Rubik", sans-serif;
+    color: whitesmoke;
+    cursor: default;
+  }
+  
+  h1 {
+    color: white;
+    font-size: 125px;
+    font-weight: 500;
+    margin: 0px;
+    padding: 0px;
     text-align: center;
-    padding: 50px 0;
-}
-.div-2{
-    background-color: brown;
-    width: 200px;
+    position: absolute;
+    top: 15%;
+    left:10%;
+  }
+  
+ .magic {
+    display: inline-block;
+  }
+.magic {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+    to right,
+    rgb(253, 132, 31),
+    rgb(225, 77, 42),
+    rgb(205, 16, 77),
+    rgb(253, 132, 31)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+  }
+
+  h2 {
+    position: absolute;
+    top: 32%;
+    left: 11%;
+    color: whitesmoke;
+    font-size: 28px;
+    font-weight: 400;
     text-align: center;
-    padding: 50px 0;
+    padding: 0%;
+    margin-top: 0%;
+    line-height: 0%;
+  }
+.button {
+    aspect-ratio: 1.6 / 1;
+    border: 0.5vmin solid rgb(205, 16, 77);
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    width: 30vmin
+}
+
+.button:hover:before {
+    background-position: 100% 100%;
+    transform: scale(1.1, 1.1);
+}
+.button:before {
+    background: linear-gradient(
+        130deg, 
+        transparent 0% 33%,
+        rgb(205, 16, 77) 66%,
+        rgb(225, 77, 42) 83.5%, 
+        rgb(253, 132, 31) 100%
+    );
+    background-position: 0% 0%;
+    background-size: 300% 300%;
+    content: "";
+    height: 100%;
+    left: 0px;
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    transition: background-position 350ms ease;
+    width: 100%;
+    z-index: 1;
+}
+.button-title {
+    position: relative;
+    color: whitesmoke;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    margin: 0px;
+    font-size: 6vmin;
+    text-align: center;
+    z-index: 2;
+    transition: 80ms ease;
+}
+.button-title:hover {
+    font-size: 6.3vmin;
+}
+.skills {
+    top: 38%;
+    left: 10%;
+}
+.projects {
+    top: 38%;
+    left: 30%;
+}
+.contact {
+    top: 38%;
+    left: 50%;
+}
+.smallskills {
+    scale: 50% 50%;
+    top: 0%;
+    left: 6.5%;
+}
+.smallprojects {
+    scale: 50% 50%;
+    top: 0%;
+    left: 16.8%;
+}
+.smallcontact {
+    scale: 50% 50%;
+    top: 0%;
+    left: 27%;
+}
+.listbox {
+    background: linear-gradient(
+        230deg, 
+        rgba(205, 16, 76, 0.3),
+        rgb(225, 77, 42, 0.3), 
+        rgb(253, 132, 31, 0.3) 
+    );
+    position:absolute;
+    top: 40%;
+    left: 11%;
+    padding: 30px;
+    padding-right: 60px;
+    line-height: 50px;
+}
+.skillsbox {
+    line-height: 60%;
+    list-style-type: none;
 }
